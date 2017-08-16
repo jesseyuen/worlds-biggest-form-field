@@ -18,7 +18,7 @@ class BiggestFormField extends Component {
   render() {
     return (
       <div className="form-wrapper">
-        <Form className="form">
+        <form className="form">
             <div className="form__field">
               <label for="worldsbiggestformfield">Welcome to the worlds biggest form field.</label>
               <input type="text" id="worldsbiggestformfield"
@@ -27,7 +27,7 @@ class BiggestFormField extends Component {
                 required
               />
             </div>
-        </Form>
+        </form>
       </div>
     );
   }
