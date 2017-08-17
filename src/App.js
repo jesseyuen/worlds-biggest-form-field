@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import WhatThe from './Wtf.js';
 
-class BiggestFormField extends Component {
+class App extends Component {
 
   state = {
     focused: false
@@ -20,17 +21,21 @@ class BiggestFormField extends Component {
       <div className="form-wrapper">
         <form className="form">
             <div className="form__field">
-              <label for="worldsbiggestformfield">Welcome to the worlds biggest form field.</label>
+              <label htmlFor="worldsbiggestformfield">Welcome to the worlds biggest form field.</label>
               <input type="text" id="worldsbiggestformfield"
                 ref={input => this.input = input}
                 className={['input', this.state.focused && 'input-focused'].join(' ')}
                 required
               />
+              <button type="submit" className='btn'>Say hello</button>
             </div>
         </form>
+
+        <WhatThe />
+        
       </div>
     );
   }
 }
 
-export default BiggestFormField;
+export default App;
