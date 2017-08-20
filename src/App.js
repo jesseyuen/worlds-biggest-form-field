@@ -19,7 +19,7 @@ class App extends Component {
   render() {
     return (
       <div className="form-wrapper">
-        <form className="form">
+        <form className="form" onSubmit={this.handleSubmit}>
             <div className="form__field">
               <label htmlFor="worldsbiggestformfield">Welcome to the worlds biggest form field.</label>
               <input type="text" id="worldsbiggestformfield"
@@ -27,12 +27,12 @@ class App extends Component {
                 className={['input', this.state.focused && 'input-focused'].join(' ')}
                 required
               />
-              <button type="submit" className='btn'>Say hello</button>
+              <button type="submit" className="btn">Say hello</button>
             </div>
         </form>
 
         <WhatThe />
-        
+
       </div>
     );
   }
