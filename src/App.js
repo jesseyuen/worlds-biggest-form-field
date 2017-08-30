@@ -1,39 +1,31 @@
 import React, { Component } from 'react';
 import './App.css';
-import WhatThe from './Wtf.js';
+import glamorous from 'glamorous';
+import WhatTheWrapper from './Wtf.js';
+import SubmitButton from './SubmitButton';
+import FormWrapper from './FormWrapper';
+import MessageInput from './MessageInput';
+
+// TODO
+// unfocus form field on esc keydown
 
 class App extends Component {
 
-  state = {
-    focused: false
-  }
-
-  componentDidMount() {
-    this.input.addEventListener('focus', this.focus);
-    this.input.addEventListener('blur', this.focus);
-  }
-  focus = () => {
-    this.setState((state) => ({ focused: !state.focused }))
-  }
-
   render() {
     return (
-      <div className="form-wrapper">
-        <form className="form" onSubmit={this.handleSubmit}>
+      
+      <FormWrapper>       
+        
+        <form className="form" onSubmit={this.handleSubmit} method="POST">
             <div className="form__field">
-              <label htmlFor="worldsbiggestformfield">Welcome to the worlds biggest form field.</label>
-              <input type="text" id="worldsbiggestformfield"
-                ref={input => this.input = input}
-                className={['input', this.state.focused && 'input-focused'].join(' ')}
-                required
-              />
-              <button type="submit" className="btn">Say hello</button>
+              <label htmlFor="worldsbiggestformfield" style={{display:'none'}}>Welcome to the worlds biggest form field.</label>
+              <MessageInput type="text" id="worldsbiggestformfield" placeholder="Welcome to the worlds biggest form field." required></MessageInput>
+              <SubmitButton type="submit" className="btn">Send me a message</SubmitButton>
             </div>
         </form>
 
-        <WhatThe />
-
-      </div>
+        <WhatTheWrapper />
+      </FormWrapper> 
     );
   }
 }
