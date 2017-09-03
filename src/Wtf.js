@@ -22,7 +22,6 @@ class WhatTheWrapper extends Component {
     return (
       <WhatThe>
         <a href="" className="form-info-toggle" onClick={toggleDraw}>Whats all this then?</a>
-        {/* <div className="form-info"><p>Information about this project will be in a modal or something.</p></div> */}
       </WhatThe>
     );
   }
