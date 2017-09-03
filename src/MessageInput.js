@@ -10,7 +10,7 @@ const MessageInput = glamorous.textarea({
     height: '100vh',
     top: 0,
     left: 0,
-    padding: '20px',
+    padding: '40px',
     border: 0,
     fontSize: 20,
     boxSizing: 'border-box',
