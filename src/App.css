@@ -1,1 +1,18 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
 
+body.has-open-draw .outer-container {
+    transform: translateX(600px);
+}
+
+.outer-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: transform 300ms ease;
+}
