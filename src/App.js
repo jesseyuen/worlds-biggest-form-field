@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import glamorous from 'glamorous';
-import WhatTheWrapper from './Wtf.js';
-import SubmitButton from './SubmitButton';
-import FormWrapper from './FormWrapper';
-import MessageInput from './MessageInput';
+import WhatTheWrapper from './components/Wtf.js';
+import SubmitButton from './components/SubmitButton';
+import FormWrapper from './components/FormWrapper';
+import MessageInput from './components/MessageInput';
 
 // TODO
 // unfocus form field on esc keydown
