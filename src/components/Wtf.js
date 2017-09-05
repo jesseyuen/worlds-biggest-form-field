@@ -11,7 +11,7 @@ const WhatThe = glamorous.section({
 function toggleDraw(e) {
   e.preventDefault();
   if ( document.body.classList.contains('has-open-draw') ) {
-  document.body.classList.remove('has-open-draw');
+    document.body.classList.remove('has-open-draw');
   } else {
     document.body.classList.add('has-open-draw');
   }
