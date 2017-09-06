@@ -5,9 +5,17 @@ import WhatTheWrapper from './components/Wtf.js';
 import SubmitButton from './components/SubmitButton';
 import FormWrapper from './components/FormWrapper';
 import MessageInput from './components/MessageInput';
+import TwitterShareWrapper from './components/TwitterShare';
 
 // TODO
 // unfocus form field on esc keydown
+
+const shareMetaWrapperStyle = {
+  position: 'absolute',
+  bottom: 20,
+  left: 20,
+  zIndex: 10
+};
 
 class App extends Component {
 
@@ -24,7 +32,10 @@ class App extends Component {
             </div>
         </form>
 
-        <WhatTheWrapper />
+       <div className="share-meta-wrapper" style={shareMetaWrapperStyle}>
+          <WhatTheWrapper />
+          <TwitterShareWrapper />
+        </div>
       </FormWrapper> 
     );
   }
