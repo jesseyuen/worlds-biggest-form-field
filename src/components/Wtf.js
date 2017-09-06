@@ -2,18 +2,17 @@ import React, { Component } from 'react';
 import glamorous from 'glamorous';
 
 const WhatThe = glamorous.section({
-  position: 'absolute',
-  bottom: 20,
-  left: 20,
-  zIndex: 10
+  display: 'inline-block'
 })
 
 function toggleDraw(e) {
-  e.preventDefault();
+  e.preventDefault();  
   if ( document.body.classList.contains('has-open-draw') ) {
-  document.body.classList.remove('has-open-draw');
+    document.body.classList.remove('has-open-draw');
+    document.getElementById('form-info-toggle').innerHTML = 'Whats all this then?';
   } else {
     document.body.classList.add('has-open-draw');
+    document.getElementById('form-info-toggle').innerHTML = 'Oh, I see... Weird.';
   }
 }
 
@@ -21,7 +20,7 @@ class WhatTheWrapper extends Component {
   render() {
     return (
       <WhatThe>
-        <a href="" className="form-info-toggle" onClick={toggleDraw}>Whats all this then?</a>
+        <a href="" id="form-info-toggle" onClick={toggleDraw}>Whats all this then?</a>
       </WhatThe>
     );
   }
