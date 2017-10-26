@@ -12,9 +12,9 @@ import InfoWrapper from './components/Info';
 // unfocus form field on esc keydown
 
 const shareMetaWrapperStyle = {
-  position: 'absolute',
-  bottom: 20,
-  left: 20,
+  position: 'fixed',
+  bottom: 40,
+  left: 40,
   zIndex: 10
 };
 
@@ -23,26 +23,30 @@ class App extends Component {
   render() {
     return (
       
-      <div className="outer-container">
+      <div className="page-container">
 
         <InfoWrapper />
-      
-        <FormWrapper>       
-          
-          <form className="form" onSubmit={this.handleSubmit} method="POST">
-              <div className="form__field">
-                <label htmlFor="worldsbiggestformfield" style={{display:'none'}}>Welcome to the worlds biggest form field.</label>
-                <MessageInput type="text" id="worldsbiggestformfield" placeholder="Welcome to the worlds biggest form field." required></MessageInput>
-                <SubmitButton type="submit" className="btn">Send me a message</SubmitButton>
-              </div>
-          </form>
 
         <div className="share-meta-wrapper" style={shareMetaWrapperStyle}>
             <WhatTheWrapper />
             <TwitterShareWrapper />
           </div>
-        </FormWrapper>
 
+        <div className="outer-container">
+        
+          <FormWrapper>       
+            
+            <form className="form" onSubmit={this.handleSubmit} method="POST">
+                <div className="form__field">
+                  <label htmlFor="worldsbiggestformfield" style={{display:'none'}}>Welcome to the worlds biggest form field.</label>
+                  <MessageInput type="text" id="worldsbiggestformfield" placeholder="Welcome to the worlds biggest form field." required></MessageInput>
+                  <SubmitButton type="submit" className="btn">Send me a message</SubmitButton>
+                </div>
+            </form>
+
+          </FormWrapper>
+
+        </div>
       </div> 
     );
   }
