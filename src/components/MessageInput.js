@@ -18,6 +18,10 @@ const MessageInput = glamorous.textarea({
     ':focus': { 
         outline: 0,
         boxShadow: 'inset 0 0 30px rgba(0,0,0, 0.15)', 
+    },
+    ':focus + label': { 
+        fontSize: '14px',
+        top: '10px'
     }
 })
 

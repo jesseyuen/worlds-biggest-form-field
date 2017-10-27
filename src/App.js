@@ -7,6 +7,7 @@ import FormWrapper from './components/FormWrapper';
 import MessageInput from './components/MessageInput';
 import TwitterShareWrapper from './components/TwitterShare';
 import InfoWrapper from './components/Info';
+import MessageLabel from './components/MessageLabel';
 
 // TODO
 // unfocus form field on esc keydown
@@ -16,6 +17,15 @@ const shareMetaWrapperStyle = {
   bottom: 40,
   left: 40,
   zIndex: 10
+};
+
+const formFieldWrapper = {
+  position: 'absolute',
+  background: '#fff',
+  width: '100vw',
+  height: '100vh',
+  top: 0,
+  left: 0
 };
 
 class App extends Component {
@@ -37,9 +47,10 @@ class App extends Component {
           <FormWrapper>       
             
             <form className="form" onSubmit={this.handleSubmit} method="POST">
-                <div className="form__field">
-                  <label htmlFor="worldsbiggestformfield" style={{display:'none'}}>Welcome to the worlds biggest form field.</label>
-                  <MessageInput type="text" id="worldsbiggestformfield" placeholder="Welcome to the worlds biggest form field." required></MessageInput>
+                <div className="form__field" style={formFieldWrapper}>
+                  <MessageInput type="text" id="worldsbiggestformfield" required></MessageInput>
+                  {/* <MessageInput type="text" id="worldsbiggestformfield" placeholder="Welcome to the worlds biggest form field." required></MessageInput> */}
+                  <MessageLabel htmlFor="worldsbiggestformfield">Welcome to the worlds biggest form field. Guess what? You're in it! Why not say Hi.</MessageLabel>
                   <SubmitButton type="submit" className="btn">Send me a message</SubmitButton>
                 </div>
             </form>
