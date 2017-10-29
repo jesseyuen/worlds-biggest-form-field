@@ -5,8 +5,9 @@ const MessageLabel = glamorous.label({
     position: 'absolute',
     top: 40,
     left: 40,
-    fontSize: 20,
-    transition: 'top 200ms ease-out, font-size 200ms ease-out'
+    fontSize: '4vw',
+    lineHeight: '1.4',
+    transition: 'top 200ms ease-out, font-size 200ms ease-out, color 200ms, line-height 200ms'
 })
 
 // html {

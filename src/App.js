@@ -50,7 +50,7 @@ class App extends Component {
                 <div className="form__field" style={formFieldWrapper}>
                   <MessageInput type="text" id="worldsbiggestformfield" required></MessageInput>
                   {/* <MessageInput type="text" id="worldsbiggestformfield" placeholder="Welcome to the worlds biggest form field." required></MessageInput> */}
-                  <MessageLabel htmlFor="worldsbiggestformfield">Welcome to the worlds biggest form field. Guess what? You're in it! Why not say Hi.</MessageLabel>
+                  <MessageLabel htmlFor="worldsbiggestformfield">Welcome to the Worlds Biggest Form Field<span>*</span> <br/>Why not say hello...</MessageLabel>
                   <SubmitButton type="submit" className="btn">Send me a message</SubmitButton>
                 </div>
             </form>
