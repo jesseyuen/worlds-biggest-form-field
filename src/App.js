@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './normalize.css';
 import './App.css';
 import glamorous from 'glamorous';
 import WhatTheWrapper from './components/Wtf.js';
@@ -8,15 +9,13 @@ import MessageInput from './components/MessageInput';
 import TwitterShareWrapper from './components/TwitterShare';
 import InfoWrapper from './components/Info';
 import MessageLabel from './components/MessageLabel';
+import WTFWrapper from './components/WtfWrapper';
 
 // TODO
 // unfocus form field on esc keydown
 
 const shareMetaWrapperStyle = {
-  position: 'fixed',
-  bottom: 40,
-  left: 40,
-  zIndex: 10
+ 
 };
 
 const formFieldWrapper = {
@@ -37,10 +36,10 @@ class App extends Component {
 
         <InfoWrapper />
 
-        <div className="share-meta-wrapper" style={shareMetaWrapperStyle}>
-            <WhatTheWrapper />
-            <TwitterShareWrapper />
-          </div>
+        <WTFWrapper>
+          <WhatTheWrapper />
+          <TwitterShareWrapper />
+        </WTFWrapper>
 
         <div className="outer-container">
         
@@ -50,8 +49,8 @@ class App extends Component {
                 <div className="form__field" style={formFieldWrapper}>
                   <MessageInput type="text" id="worldsbiggestformfield" required></MessageInput>
                   {/* <MessageInput type="text" id="worldsbiggestformfield" placeholder="Welcome to the worlds biggest form field." required></MessageInput> */}
-                  <MessageLabel htmlFor="worldsbiggestformfield">Welcome to the Worlds Biggest Form Field<span>*</span> <br/>Why not say hello...</MessageLabel>
-                  <SubmitButton type="submit" className="btn">Send me a message</SubmitButton>
+                  <MessageLabel htmlFor="worldsbiggestformfield">Welcome to the Worlds Biggest Form Field<span>*</span><br/>p.s. You're in it! Why not say hello?</MessageLabel>
+                  <SubmitButton type="submit"><span>🚀&nbsp; Send message</span></SubmitButton>
                 </div>
             </form>
 

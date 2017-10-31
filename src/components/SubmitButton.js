@@ -3,29 +3,51 @@ import glamorous from 'glamorous';
 
 const SubmitButton = glamorous.button ({
     position: 'absolute',
-    bottom: 20,
-    right: 20,
-    background: '#000',
-    fontSize: '15px',
-    border: 'none',
-    cursor: 'pointer',
-    display: 'inline-block',
-    padding: '10px 20px 12px',
-    textAlign: 'center',
-    transition: '0.25s cubic-bezier(0.17, 0.67, 0.52, 0.97)',
-    borderRadius: 4,
-    color: '#fff',
-    zIndex: '50',
-    boxShadow: '0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08)',
-    ':hover': {
-        background: '#333',
-        transform: 'translateY(-1px)',
-        boxShadow: '0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08)'
+    bottom: 40,
+    right: 40,
+    border: 0,
+    fontWeight: '700',
+    background: 'none',
+    border: 0,
+    padding: 0,
+      
+    ' span': {
+        display: 'block',
+        position: 'relative',
+        padding: '15px 26px',
+        background: '#fff',
+        color: '#191919',
+        border: '4px solid #191919',
+        transition: 'transform .2s ease',
+        zIndex: 1,
+        willChange: 'transform',
     },
-    ':focus': { outline: 0 },
-    ':active': {
-        transform: 'translateY(1px)'
+    
+    ' &::after': {
+        content: `''`, 
+        position: 'absolute',
+        top: '4px',
+        left: '4px',
+        width: 'calc(100% - 5px)',
+        height: 'calc(100% - 5px)',
+        background: '#191919',
+        border: '4px solid #191919',
+    },
+      
+    ' &:hover span': {
+        transform: 'translate(-2px, -2px)',
+    },
+      
+    ' &:active span': {
+        transition: 'transform .05s ease',
+        transform: 'translate(0, 0)',
+    },
+    
+    ' &:focus': {
+        outline: 'none',
     }
+
+
 })
 
 export default SubmitButton;

@@ -5,31 +5,31 @@ const Info = glamorous.div({
   position: 'fixed',
   height: '100vh',
   width: '500px',
-  backgroundColor: "#000",
+  backgroundColor: "#191919",
   color: '#fff',
-  overflowY: 'scroll',
+  overflowY: 'auto',
   lineHeight: '1.6',
 
   '&::after': {
-    display: 'block',
-    position: 'fixed',
-    bottom: '0',
-    left: '0',
-    width: '500px',
-    height: '175px',
-    background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 60%)',
-    zIndex: '20',
-    content: `''`, 
+      display: 'block',
+      position: 'fixed',
+      bottom: '0',
+      left: '0',
+      width: '500px',
+      height: '175px',
+      background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 60%)',
+      zIndex: '20',
+      content: `''`, 
   },
 
   ' .infowrapper-inner': {
-    position: 'relative',
-    padding: '40px',
-    zIndex: '5',
+      position: 'relative',
+      padding: '40px',
+      zIndex: '5',
   },
   
   '& p': {
-    margin: '0 0 20px 0',
+      margin: '0 0 20px 0',
   },
 
   

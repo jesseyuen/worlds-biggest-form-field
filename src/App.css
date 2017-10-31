@@ -2,6 +2,8 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
+    font-family: 'Muli', sans-serif;
+    font-weight: 300;
 }
 
 .outer-container {
@@ -34,4 +36,8 @@ body.has-open-draw .outer-container {
 
 body.has-open-draw .outer-container:before {
     opacity: 0.3;
+}
+
+#form-info-toggle {
+    width: 235px;
 }
