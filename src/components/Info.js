@@ -9,6 +9,8 @@ const Info = glamorous.div({
   color: '#fff',
   overflowY: 'auto',
   lineHeight: '1.6',
+  fontSize: '18px',
+  fontSize: '1.8rem',
 
   '&::after': {
       display: 'block',
@@ -42,7 +44,9 @@ class InfoWrapper extends Component {
     return (
       <Info>
         <div className="infowrapper-inner">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla gravida, eros eu semper dapibus, est erat luctus dolor, non ultricies nulla ex eget magna. In dapibus nisl id scelerisque eleifend. Fusce mollis justo vel faucibus volutpat. Nulla ut vulputate turpis. In sed semper velit, nec sagittis urna. Proin mollis tincidunt ex. Praesent tincidunt neque eget consectetur porttitor. Morbi euismod, urna sit amet interdum porta, ligula sem cursus massa, ut suscipit mauris velit quis ipsum. Cras nec lorem vulputate, sodales nisl vitae, gravida enim. Mauris elementum mi pellentesque mi vehicula facilisis.</p>
+        <p>I come from a land obsessed with oversized things. Wait, not those kinds of things... get your mind out of the gutter, geez. Novelty structures of everyday things, but just really, really big.</p> 
+        
+        <p>There's the <a href="" title="More about The Big Banana">The Big Banana</a> in Coffs Harbour and the <a href="" title="More about The Big Camera">The Big Camera</a> in Meckering. The <a href="" title="More about Big Rocking Horse">Big Rocking Horse</a> in Gumeracha is a must see is the <a href="" title="More about The Big Poo">The Big Poo</a> in Mornington Peninsula.</p>
         </div>
       </Info>
     );

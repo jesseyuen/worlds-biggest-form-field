@@ -1,9 +1,34 @@
+html {
+    font-size: 62.5%;
+}
+
 body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-    font-family: 'Muli', sans-serif;
+    font-family: 'soleil', sans-serif;
     font-weight: 300;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#app {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.page-container {
+    width: 100%;
+    /* //overflow: hidden; */
+    position: relative;
 }
 
 .outer-container {
@@ -36,8 +61,4 @@ body.has-open-draw .outer-container {
 
 body.has-open-draw .outer-container:before {
     opacity: 0.3;
-}
-
-#form-info-toggle {
-    width: 235px;
 }

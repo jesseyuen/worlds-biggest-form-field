@@ -10,6 +10,7 @@ const SubmitButton = glamorous.button ({
     background: 'none',
     border: 0,
     padding: 0,
+    fontFamily: " 'soleil', sans-serif ",
       
     ' span': {
         display: 'block',

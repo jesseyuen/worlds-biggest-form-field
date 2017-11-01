@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './normalize.css';
 import './App.css';
-import glamorous from 'glamorous';
 import WhatTheWrapper from './components/Wtf.js';
 import SubmitButton from './components/SubmitButton';
 import FormWrapper from './components/FormWrapper';

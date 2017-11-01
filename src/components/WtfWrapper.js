@@ -6,6 +6,7 @@ const WTFWrapper = glamorous.div({
   bottom: 40,
   left: 40,
   zIndex: 10,
+  transform: 'translateZ(0)',
 
   ' a': {
     textDecoration: 'none',
