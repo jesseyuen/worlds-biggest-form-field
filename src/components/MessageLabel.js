@@ -24,8 +24,8 @@ const MessageLabel = glamorous.label({
     },
     
     '@media(max-width: 700px)': {
-        fontSize: '16px',
-        fontSize: '1.6em',
+        fontSize: '13px',
+        fontSize: '1.3em',
         top: 25,
         left: 25,
         paddingRight: '20px',

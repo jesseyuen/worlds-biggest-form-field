@@ -18,12 +18,12 @@ const shareMetaWrapperStyle = {
 };
 
 const formFieldWrapper = {
-  position: 'absolute',
+  position: 'fixed',
   background: '#fff',
   width: '100vw',
   height: '100vh',
   top: 0,
-  left: 0
+  left: 0,
 };
 
 class App extends Component {

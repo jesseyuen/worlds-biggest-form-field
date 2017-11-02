@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import glamorous from 'glamorous';
 
 const WhatThe = glamorous.section({
-  display: 'inline-block'
+  display: 'inline-block',
+  
+  '@media(max-width: 530px)': {
+    width: '50%',
+  },
 })
 
 

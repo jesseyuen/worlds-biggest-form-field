@@ -39,15 +39,36 @@ const WTFWrapper = glamorous.div({
 		border: '4px solid #191919',
   },
   
-  ' a:hover span': {
-		transform: 'translate(-2px, -2px)',
+  '@media(min-width: 700px)': {
+    
+     ' a:hover span': {
+         transform: 'translate(-2px, -2px)',
+     },
+       
+     ' a:active span': {
+         transition: 'transform .05s ease',
+         transform: 'translate(0, 0)',
+     },
   },
-  
-  ' a:active span': {
-		transition: 'transform .05s ease',
-		transform: 'translate(0, 0)'
-	}
 
+  '@media(max-width: 530px)': {
+      bottom: '0',
+      left: 0,
+      width: '100%',
+
+      ' span': {
+          padding: '16px 25px',
+      },
+
+      ' a': {
+        width: '100%',
+        display: 'block',
+      },
+
+      ' a::after': {
+          content: `none`, 
+      },
+  },
 
 })
 

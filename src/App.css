@@ -28,7 +28,7 @@ html, body {
 .page-container {
     width: 100%;
     /* //overflow: hidden; */
-    position: relative;
+    /* position: relative; */
 }
 
 .outer-container {
@@ -62,3 +62,8 @@ body.has-open-draw .outer-container {
 body.has-open-draw .outer-container:before {
     opacity: 0.3;
 }
+
+#form-info-toggle {
+    //width: 180px;
+}
+

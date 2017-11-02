@@ -11,11 +11,13 @@ const SubmitButton = glamorous.button ({
     border: 0,
     padding: 0,
     fontFamily: " 'soleil', sans-serif ",
+    textTransform: 'uppercase',
+    letterSpacing: '0.02em',
       
     ' span': {
         display: 'block',
         position: 'relative',
-        padding: '15px 26px',
+        padding: '15px 25px',
         background: '#fff',
         color: '#191919',
         border: '4px solid #191919',
@@ -34,19 +36,37 @@ const SubmitButton = glamorous.button ({
         background: '#191919',
         border: '4px solid #191919',
     },
-      
-    ' &:hover span': {
-        transform: 'translate(-2px, -2px)',
-    },
-      
-    ' &:active span': {
-        transition: 'transform .05s ease',
-        transform: 'translate(0, 0)',
-    },
     
     ' &:focus': {
         outline: 'none',
-    }
+    },
+
+    '@media(min-width: 700px)': {
+       
+        ' &:hover span': {
+            transform: 'translate(-2px, -2px)',
+        },
+          
+        ' &:active span': {
+            transition: 'transform .05s ease',
+            transform: 'translate(0, 0)',
+        },
+    },
+    
+    '@media(max-width: 530px)': {
+        bottom: '58px',
+        right: 0,
+        width: '100%',
+
+        ' span': {
+            borderBottom: '0',
+            padding: '16px 25px',
+        },
+
+        ' &::after': {
+            content: `none`, 
+        },
+    },
 
 
 })

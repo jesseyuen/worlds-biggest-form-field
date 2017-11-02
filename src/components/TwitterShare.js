@@ -3,7 +3,16 @@ import glamorous from 'glamorous';
 
 const TwitterShare = glamorous.div({
   display: 'inline-block',
-  margin: '0 0 0 20px'
+  margin: '0 0 0 20px',
+
+  '@media(max-width: 530px)': {
+    width: '50%',
+    margin: '0',
+
+    ' span': {
+       borderLeft: '0',
+    },
+  },
 })
 
 class TwitterShareWrapper extends Component {

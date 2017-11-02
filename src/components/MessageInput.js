@@ -3,8 +3,9 @@ import glamorous from 'glamorous';
 
 const MessageInput = glamorous.textarea({
     position: 'absolute',
-     background: '#FDC02F',
-    //background: '#2980b9',
+    // background: '#34495e',
+    // background: '#2980b9',
+    background: '#27ae60',
     width: '100vw',
     height: '100vh',
     top: 0,
@@ -24,7 +25,7 @@ const MessageInput = glamorous.textarea({
     ':focus': { 
         outline: 0,
         padding: '180px 40px 40px',
-        background: '#16a085'
+        background: '#2c3e50'
     },
 
     ':focus + label': { 
@@ -49,20 +50,24 @@ const MessageInput = glamorous.textarea({
     
     '@media(max-width: 700px)': {
         padding: '160px 25px 40px',
-        fontSize: '16px',
-        fontSize: '1.6em',
+        fontSize: '13px',
+        fontSize: '1.3em',
 
         ':focus': { 
             padding: '120px 25px 40px',
         },
 
         ':focus + label': { 
-            fontSize: '16px',
-            fontSize: '1.6em',
-            transform: 'scale(0.5)',
+            fontSize: '10px',
+            fontSize: '1.0em',
+            //transform: 'scale(0.5)',
             // fontSize: '10px',
             // fontSize: '1.0em',
         },
+    },
+
+    '@media(max-width: 530px)': {
+        border: '4px solid #191919'
     },
 })
 

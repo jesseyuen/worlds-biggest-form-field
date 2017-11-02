@@ -8,7 +8,7 @@ const Info = glamorous.div({
   backgroundColor: "#191919",
   color: '#fff',
   overflowY: 'auto',
-  lineHeight: '1.6',
+  lineHeight: '1.7',
   fontSize: '18px',
   fontSize: '1.8rem',
 
@@ -26,7 +26,7 @@ const Info = glamorous.div({
 
   ' .infowrapper-inner': {
       position: 'relative',
-      padding: '40px',
+      padding: '40px 40px 120px',
       zIndex: '5',
   },
   
@@ -34,8 +34,129 @@ const Info = glamorous.div({
       margin: '0 0 20px 0',
   },
 
-  
+  ' span': {
+    // borderLeft: '0',
+    // borderRight: '0',
+    borderBottom: '0',
+    padding: '16px 5px',
+  },
 
+  ' a': {
+    position: 'relative',
+    color: 'inherit',
+    textDecoration: 'none',
+    transition: 'color 200ms',
+
+    '&::after': {
+      position: 'absolute',
+      bottom: '-2px',
+      left: '0',
+      width: '100%',
+      height: '2px',
+      background: '#fff',
+      content: `''`, 
+    },
+  },
+
+  ' .bananna': {
+      '&::after': {
+        background: '#f1c40f',
+      },
+  
+      ' &:hover': {
+        color: '#f1c40f',
+      },
+  
+    },
+  
+  ' .camera': {
+    '&::after': {
+      background: '#AAC6DC',
+    },
+
+    ' &:hover': {
+      color: '#AAC6DC',
+    },
+
+  },
+  
+  ' .horse': {
+    '&::after': {
+      background: '#3498db',
+    },
+
+    ' &:hover': {
+      color: '#3498db',
+    },
+
+  },
+  
+  ' .poo': {
+    '&::after': {
+      background: '#7F5446',
+    },
+
+    ' &:hover': {
+      color: '#7F5446',
+    },
+
+  },
+  
+  ' .prawn': {
+    '&::after': {
+      background: '#F68548',
+    },
+
+    ' &:hover': {
+      color: '#F68548',
+    },
+
+  },
+  
+  ' .boot': {
+    '&::after': {
+      background: '#27ae60',
+    },
+
+    ' &:hover': {
+      color: '#27ae60',
+    },
+
+  },
+  
+  ' .orange': {
+    '&::after': {
+      background: '#f39c12',
+    },
+
+    ' &:hover': {
+      color: '#f39c12',
+    },
+
+  },
+  
+  ' .rock': {
+    '&::after': {
+      background: '#C2431D',
+    },
+
+    ' &:hover': {
+      color: '#C2431D',
+    },
+
+  },
+
+  ' .fancy': {
+    position: 'relative',
+    fontSize: '22px',
+    // top: '-5px',
+    fontFamily: 'Libre Baskerville',
+    padding: '0',
+  },
+
+  '@media(max-width: 500px)': {
+    width: '100vw',
+  },
 
 })
 
@@ -44,9 +165,15 @@ class InfoWrapper extends Component {
     return (
       <Info>
         <div className="infowrapper-inner">
-        <p>I come from a land obsessed with oversized things. Wait, not those kinds of things... get your mind out of the gutter, geez. Novelty structures of everyday things, but just really, really big.</p> 
-        
-        <p>There's the <a href="" title="More about The Big Banana">The Big Banana</a> in Coffs Harbour and the <a href="" title="More about The Big Camera">The Big Camera</a> in Meckering. The <a href="" title="More about Big Rocking Horse">Big Rocking Horse</a> in Gumeracha is a must see is the <a href="" title="More about The Big Poo">The Big Poo</a> in Mornington Peninsula.</p>
+          <p>I come from a land seemingly obsessed with oversized things. Hey, not those kinds of things... get your mind out of the gutter, geez. I'm talking about novelty structures of everyday things, although really, really big.</p> 
+
+          <p>These include a big <a href="http://www.thebigcamera.com.au/" title="More about The Big Camera" target="_blank" className="camera">Camera</a>, <a href="https://en.wikipedia.org/wiki/Big_Rocking_Horse
+" title="More about The Big Rocking Horse" target="_blank" className="horse">Rocking Horse</a>, <a href="https://www.pinterest.com.au/pin/156570524516955715/" title="More about The Big Poo" target="_blank" className="poo">Poo</a>, <a href="https://www.tripadvisor.com.au/Attraction_Review-g528913-d8115622-Reviews-Big_Prawn-Ballina_New_South_Wales.html" title="More about The Big Prawn" target="_blank" className="rock">Prawn</a>, <a href="https://harveyvisitorcentre.com.au/big-orange---harvey-wa.html" title="More about The Big Orange" target="_blank" className="orange">Orange</a>, <a href="https://en.wikipedia.org/wiki/Golden_Gumboot" title="More about The Big Gumboot" target="_blank" className="boot">Gumboot</a>. I could go on.... <br/> We even have a giant <a href="https://en.wikipedia.org/wiki/Uluru" title="More about Uluru" target="_blank" className="rock">Rock</a></p> 
+
+        <p>It's an honour to add a giant F O R M &nbsp; F I E L D to the collection.</p>
+
+        <p><span className="fancy">*</span> Disclaimer: May not be the biggest form field in the world however it's without a doubt the biggest in the southern hemisphere.</p>
+
         </div>
       </Info>
     );
