@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import glamorous from 'glamorous';
 
 const FormWrapper = glamorous.section({

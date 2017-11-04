@@ -1,3 +1,5 @@
+/*eslint-env jquery*/
+
 import React, { Component } from 'react';
 import './normalize.css';
 import './App.css';
@@ -10,13 +12,6 @@ import InfoWrapper from './components/Info';
 import MessageLabel from './components/MessageLabel';
 import WTFWrapper from './components/WtfWrapper';
 
-// TODO
-// unfocus form field on esc keydown
-
-const shareMetaWrapperStyle = {
- 
-};
-
 const formFieldWrapper = {
   position: 'fixed',
   background: '#fff',
@@ -26,7 +21,71 @@ const formFieldWrapper = {
   left: 0,
 };
 
+
+document.onkeydown = function(evt) {
+  evt = evt || window.event;
+  if (evt.keyCode == 27) {
+    document.body.classList.remove('has-open-draw');
+    document.getElementById('form-info-toggle').innerHTML = '<span>🤔&nbsp; Eh?</span>';
+  }
+}
+
+
 class App extends Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      contactMessage: ''
+    }; 
+
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
+  
+  //Change state of input field so text is updated while typing
+  handleChange(e) {
+    this.setState({
+      contactMessage: e.target.value,
+    });
+  }
+  
+  handleSubmit(e) {
+    e.preventDefault();
+  
+    $.ajax({
+      url: process.env.NODE_ENV !== "production" ? '/getMail' : "mailer.php",
+      type: 'POST',
+      data: {
+        'form_msg': this.state.contactMessage
+      },
+      cache: false,
+      success: function(data) {
+        // Success..
+        this.setState({
+          contactMessage: ''
+        });
+        $('#formButton').html('<span>🚀&nbsp; Yes!</span>');
+        console.log('success', data);
+      }.bind(this),
+      
+      // Fail..
+      error: function(xhr, status, err) {
+        console.log(xhr, status);
+        console.log(err);
+        this.setState({
+          //contactMessage: ''
+        });
+        $('#formButton').html('<span>😲&nbsp; Error!</span>');
+
+        setTimeout(function(){
+          $('#formButton').html('<span>🚀&nbsp; Send</span>');
+        }, 4000);
+
+        console.log(this.state.contactMessage + 'fail');
+      }.bind(this)
+    });
+  }
 
   render() {
     return (
@@ -46,10 +105,9 @@ class App extends Component {
             
             <form className="form" onSubmit={this.handleSubmit} method="POST">
                 <div className="form__field" style={formFieldWrapper}>
-                  <MessageInput type="text" id="worldsbiggestformfield" required></MessageInput>
-                  {/* <MessageInput type="text" id="worldsbiggestformfield" placeholder="Welcome to the worlds biggest form field." required></MessageInput> */}
-                  <MessageLabel htmlFor="worldsbiggestformfield">Welcome to the Worlds Biggest Form Field<span>*</span><br/>p.s. You're in it! Why not say hello?</MessageLabel>
-                  <SubmitButton type="submit"><span>🚀&nbsp; Send message</span></SubmitButton>
+                  <MessageInput type="text" id="formMsg" value={this.state.contactMessage} onChange={this.handleChange} required></MessageInput>
+                  <MessageLabel htmlFor="worldsbiggestformfield" id="formLabel">Welcome to The Worlds Biggest Form Field<span>*</span><br/>p.s. You're in it! Why not say hello?</MessageLabel>
+                  <SubmitButton type="submit" id="formButton"><span>🚀&nbsp; Send!</span></SubmitButton>
                 </div>
             </form>
 

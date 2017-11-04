@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import glamorous from 'glamorous';
 
 const SubmitButton = glamorous.button ({
@@ -13,6 +13,7 @@ const SubmitButton = glamorous.button ({
     fontFamily: " 'soleil', sans-serif ",
     textTransform: 'uppercase',
     letterSpacing: '0.02em',
+    fontSize: '20px',
       
     ' span': {
         display: 'block',

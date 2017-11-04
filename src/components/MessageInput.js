@@ -4,8 +4,8 @@ import glamorous from 'glamorous';
 const MessageInput = glamorous.textarea({
     position: 'absolute',
     // background: '#34495e',
-    // background: '#2980b9',
-    background: '#27ae60',
+     background: '#2980b9',
+    // background: '#27ae60',
     width: '100vw',
     height: '100vh',
     top: 0,
