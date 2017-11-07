@@ -14,6 +14,7 @@ const SubmitButton = glamorous.button ({
     textTransform: 'uppercase',
     letterSpacing: '0.02em',
     fontSize: '20px',
+    fontSize: '2rem',
       
     ' span': {
         display: 'block',
@@ -58,6 +59,8 @@ const SubmitButton = glamorous.button ({
         bottom: '58px',
         right: 0,
         width: '100%',
+        fontSize: '16px',
+        fontSize: '1.6rem',
 
         ' span': {
             borderBottom: '0',

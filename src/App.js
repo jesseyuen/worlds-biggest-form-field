@@ -27,6 +27,7 @@ document.onkeydown = function(evt) {
   if (evt.keyCode == 27) {
     document.body.classList.remove('has-open-draw');
     document.getElementById('form-info-toggle').innerHTML = '<span>🤔&nbsp; Eh?</span>';
+    document.activeElement.blur();
   }
 }
 
@@ -65,7 +66,11 @@ class App extends Component {
         this.setState({
           contactMessage: ''
         });
-        $('#formButton').html('<span>🚀&nbsp; Yes!</span>');
+        $('#formButton').html('<span>🙌&nbsp; Recieved!</span>');
+        
+        setTimeout(function(){
+          $('#formButton').html('<span>🚀&nbsp; Send</span>');
+        }, 4000);
         console.log('success', data);
       }.bind(this),
       
@@ -106,7 +111,7 @@ class App extends Component {
             <form className="form" onSubmit={this.handleSubmit} method="POST">
                 <div className="form__field" style={formFieldWrapper}>
                   <MessageInput type="text" id="formMsg" value={this.state.contactMessage} onChange={this.handleChange} required></MessageInput>
-                  <MessageLabel htmlFor="worldsbiggestformfield" id="formLabel">Welcome to The Worlds Biggest Form Field<span>*</span><br/>p.s. You're in it! Why not say hello?</MessageLabel>
+                  <MessageLabel htmlFor="worldsbiggestformfield" id="formLabel">Welcome to The Worlds Biggest Form<span>*</span><br/>Why not say hello?</MessageLabel>
                   <SubmitButton type="submit" id="formButton"><span>🚀&nbsp; Send!</span></SubmitButton>
                 </div>
             </form>

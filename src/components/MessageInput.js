@@ -4,8 +4,9 @@ import glamorous from 'glamorous';
 const MessageInput = glamorous.textarea({
     position: 'absolute',
     // background: '#34495e',
-     background: '#2980b9',
     // background: '#27ae60',
+    //background: '#2980b9',
+    background: '#f1c40f',
     width: '100vw',
     height: '100vh',
     top: 0,
@@ -29,37 +30,37 @@ const MessageInput = glamorous.textarea({
     },
 
     ':focus + label': { 
-        fontSize: '22px',
-        fontSize: '2.2em',
+        fontSize: '16px',
+        fontSize: '1.6em',
         //transform: 'scale(0.6)',
         color: '#fff',
     },
 
     '@media(min-width: 701px) and (max-width: 1500px)': {
-        padding: '12vw 40px 40px',
+        padding: '13vw 40px 40px',
         fontSize: '3vw',
 
         ':focus': { 
-            padding: '10vw 40px 40px',
+            padding: '12vw 40px 40px',
         },
         
         ':focus + label': { 
-            fontSize: '1.5vw',
+            fontSize: '2vw',
         },
     },
     
     '@media(max-width: 700px)': {
-        padding: '160px 25px 40px',
-        fontSize: '13px',
-        fontSize: '1.3em',
+        padding: '120px 25px 40px',
+        fontSize: '16px',
+        fontSize: '1.6em',
 
         ':focus': { 
-            padding: '120px 25px 40px',
+            padding: '80px 25px 40px',
         },
 
         ':focus + label': { 
-            fontSize: '10px',
-            fontSize: '1.0em',
+            fontSize: '9px',
+            fontSize: '0.9em',
             //transform: 'scale(0.5)',
             // fontSize: '10px',
             // fontSize: '1.0em',
