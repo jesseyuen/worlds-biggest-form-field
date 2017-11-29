@@ -56,15 +56,14 @@ const SubmitButton = glamorous.button ({
     },
     
     '@media(max-width: 530px)': {
-        bottom: '58px',
-        right: 0,
-        width: '100%',
-        fontSize: '16px',
-        fontSize: '1.6rem',
+        bottom: 10,
+        right: 10,
+        width: 'calc(30% - 10px)',
+        fontSize: '13px',
+        fontSize: '1.3rem',
 
         ' span': {
-            borderBottom: '0',
-            padding: '16px 25px',
+            padding: '16px 5px',
         },
 
         ' &::after': {

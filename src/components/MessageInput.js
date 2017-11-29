@@ -34,6 +34,7 @@ const MessageInput = glamorous.textarea({
         fontSize: '1.6em',
         //transform: 'scale(0.6)',
         color: '#fff',
+        opacity: 0.5,
     },
 
     '@media(min-width: 701px) and (max-width: 1500px)': {
@@ -68,22 +69,9 @@ const MessageInput = glamorous.textarea({
     },
 
     '@media(max-width: 530px)': {
-        border: '4px solid #191919'
+        //border: '4px solid #191919'
     },
 })
-
-// const bounce = css.keyframes({ 
-//     '0%': { transform: 'scale(1)', opacity: 0.3 },
-//     '55%': { transform: 'scale(1.2)', opacity: 1 },
-//     '100%': { transform: 'scale(1)', opacity: 0.3 }
-// })
-
-// const MyBouncyDiv = glamorous.div({
-//     animation: `${bounce} 1s infinite`,
-//     width: 50,
-//     height: 50,
-//     backgroundColor: 'red',
-// })
 
 export default MessageInput;
 

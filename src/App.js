@@ -55,21 +55,24 @@ class App extends Component {
     e.preventDefault();
   
     $.ajax({
-      url: process.env.NODE_ENV !== "production" ? '/getMail' : "mailer.php",
-      type: 'POST',
+      // url: process.env.NODE_ENV !== "production" ? '/getMail' : "mailer.php",
+      url: "mailer.php",
+      type: "POST",
       data: {
-        'form_msg': this.state.contactMessage
+        "form_msg": this.state.contactMessage
       },
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
       cache: false,
       success: function(data) {
         // Success..
         this.setState({
           contactMessage: ''
         });
-        $('#formButton').html('<span>🙌&nbsp; Recieved!</span>');
+        $('#formButton').html("<span>🙌&nbsp; Recieved!</span>");
         
         setTimeout(function(){
-          $('#formButton').html('<span>🚀&nbsp; Send</span>');
+          $('#formButton').html("<span>🚀&nbsp; Send</span>");
         }, 4000);
         console.log('success', data);
       }.bind(this),
@@ -81,13 +84,13 @@ class App extends Component {
         this.setState({
           //contactMessage: ''
         });
-        $('#formButton').html('<span>😲&nbsp; Error!</span>');
+        $('#formButton').html("<span>😲&nbsp; Error!</span>");
 
         setTimeout(function(){
-          $('#formButton').html('<span>🚀&nbsp; Send</span>');
+          $('#formButton').html("<span>🚀&nbsp; Send</span>");
         }, 4000);
 
-        console.log(this.state.contactMessage + 'fail');
+        console.log(this.state.contactMessage + "fail");
       }.bind(this)
     });
   }

@@ -14,16 +14,16 @@
   }
 
   // Set the recipient email address.
-  $recipient = "hello@jesseyuen.com";
+  $recipient = "contactjesseyuen@gmail.com";
+  
   // Set the email subject.
-  $subject = "Message to Jesse from: $email";
+  $subject = "Message to Jesse from: some random visiting THE WORLDS BIGGEST FORM";
 
   // Build the email content.
-  //$body .= "Email: $email\n\n";
   $body .= "Message: \n$message\n";
 
   // success
-  $success = mail($recipient, $subject, $body, "From:" . $email);
+  $success = mail($recipient, $subject, $body);
 
   // Send the email.
   if ($success) {

@@ -35,8 +35,6 @@ const Info = glamorous.div({
   },
 
   ' span': {
-    // borderLeft: '0',
-    // borderRight: '0',
     borderBottom: '0',
     padding: '16px 5px',
   },
@@ -171,7 +169,7 @@ class InfoWrapper extends Component {
         <div className="infowrapper-inner">
           <p>I come from a land curiously obsessed with oversized things. Hey, not those kinds of things... get your mind out of the gutter, geez. I'm talking about novelty structures of everyday things, just really, really big.</p> 
 
-          <p>We're talking, amonst others, big <a href="http://www.thebigcamera.com.au/" title="More about The Big Camera" target="_blank" className="camera">Cameras</a>, <a href="https://www.pinterest.com.au/pin/156570524516955715/" title="More about The Big Poo" target="_blank" className="poo">Poos</a>, <a href="https://www.tripadvisor.com.au/Attraction_Review-g528913-d8115622-Reviews-Big_Prawn-Ballina_New_South_Wales.html" title="More about The Big Prawn" target="_blank" className="prawn">Prawns</a>,  <a href="https://en.wikipedia.org/wiki/Big_Rocking_Horse" title="More about The Big Rocking Horse" target="_blank" className="horses">Rocking Horses</a>, <a href="https://harveyvisitorcentre.com.au/big-orange---harvey-wa.html" title="More about The Big Orange" target="_blank" className="orange">Oranges</a> and <a href="https://en.wikipedia.org/wiki/Golden_Gumboot" title="More about The Big Gumboot" target="_blank" className="boot">Gumboots</a>. We also have an espcially lovely giant <a href="https://en.wikipedia.org/wiki/Uluru" title="More about Uluru" target="_blank" className="rock">Rock</a>. </p> 
+          <p>I'm talking big <a href="http://www.thebigcamera.com.au/" title="More about The Big Camera" target="_blank" className="camera">Cameras</a>, <a href="https://www.pinterest.com.au/pin/156570524516955715/" title="More about The Big Poo" target="_blank" className="poo">Poos</a>, <a href="https://www.tripadvisor.com.au/Attraction_Review-g528913-d8115622-Reviews-Big_Prawn-Ballina_New_South_Wales.html" title="More about The Big Prawn" target="_blank" className="prawn">Prawns</a>,  <a href="https://en.wikipedia.org/wiki/Big_Rocking_Horse" title="More about The Big Rocking Horse" target="_blank" className="horses">Rocking Horses</a>, <a href="https://harveyvisitorcentre.com.au/big-orange---harvey-wa.html" title="More about The Big Orange" target="_blank" className="orange">Oranges</a> & <a href="https://en.wikipedia.org/wiki/Golden_Gumboot" title="More about The Big Gumboot" target="_blank" className="boot">Gumboots</a>. I'm especially fond of our rather big <a href="https://en.wikipedia.org/wiki/Uluru" title="More about Uluru" target="_blank" className="rock">Rock</a>. </p> 
 
         <p>It's an honour to add this giant FORM to the collection. Always expanding to fit your viewport, this form is only limited in size by the screen you view it in.</p>
         <br />
@@ -179,7 +177,7 @@ class InfoWrapper extends Component {
 
         <p className="smalltext"><span className="fancy">*</span> Disclaimer: May not actually be the biggest form in the world however it's without a doubt the biggest in the southern hemisphere.</p>
         
-        <p className="smalltext"><span className="fancy">**</span> This project was an excuse to dip my toes into the React ecosystem, learn a little along the way and get emojis out of my system. It's rough around the edges and I'm ok with that.</p>
+        <p className="smalltext"><span className="fancy">**</span> This project was an excuse to dip my toes into the React ecosystem, learn a little along the way and get emojis out of my system. It's rough around the edges and questionablely over-engineered but I'm ok with this and I hope you are too.</p>
 
         </div>
       </Info>

@@ -52,12 +52,14 @@ const WTFWrapper = glamorous.div({
   },
 
   '@media(max-width: 530px)': {
-      bottom: '0',
-      left: 0,
-      width: '100%',
+      bottom: 10,
+      left: 10,
+      width: 'calc(65% - 10px)',
+      fontSize: '13px',
+      fontSize: '1.3rem',
 
       ' span': {
-          padding: '16px 25px',
+          padding: '16px 5px',
       },
 
       ' a': {
