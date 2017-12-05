@@ -61,9 +61,7 @@ class App extends Component {
       data: {
         "form_msg": this.state.contactMessage
       },
-      contentType: "application/json; charset=utf-8",
-      dataType: "json",
-      cache: false,
+      dataType: "html",
       success: function(data) {
         // Success..
         this.setState({
