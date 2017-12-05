@@ -61,7 +61,9 @@ class App extends Component {
       data: {
         "form_msg": this.state.contactMessage
       },
-      dataType: "html",
+      contentType: "application/json; charset=utf-8",
+      dataType: "json",
+      cache: false,
       success: function(data) {
         // Success..
         this.setState({
@@ -74,10 +76,6 @@ class App extends Component {
         }, 4000);
         console.log('success', data);
       }.bind(this),
-
-      beforeSend: function(data){
-        $('#formButton').html("<span>⏱️&nbsp; Sending</span>");
-      },
       
       // Fail..
       error: function(xhr, status, err) {

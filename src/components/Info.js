@@ -57,7 +57,7 @@ const Info = glamorous.div({
     },
   
   ' .camera': {
-    boxShadow: 'inset 0 -3px 0 0 #bdb', 
+    boxShadow: 'inset 0 -3px 0 0 #AAC6DC', 
 
     ' &:hover': {
       color: '#AAC6DC',
