@@ -2,7 +2,7 @@
 import glamorous from 'glamorous';
 
 const SubmitButton = glamorous.button ({
-    position: 'absolute',
+    position: 'fixed',
     bottom: 40,
     right: 40,
     border: 0,
@@ -13,8 +13,8 @@ const SubmitButton = glamorous.button ({
     fontFamily: " 'soleil', sans-serif ",
     textTransform: 'uppercase',
     letterSpacing: '0.02em',
-    fontSize: '20px',
-    fontSize: '2rem',
+    fontSize: '16px',
+    fontSize: '1.6rem',
       
     ' span': {
         display: 'block',
@@ -22,21 +22,23 @@ const SubmitButton = glamorous.button ({
         padding: '15px 25px',
         background: '#fff',
         color: '#191919',
-        border: '4px solid #191919',
+        border: '3px solid #191919',
         transition: 'transform .2s ease',
         zIndex: 1,
         willChange: 'transform',
+        borderRadius: 3,
     },
     
     ' &::after': {
         content: `''`, 
         position: 'absolute',
-        top: '4px',
-        left: '4px',
+        top: '3px',
+        left: '3px',
         width: 'calc(100% - 5px)',
         height: 'calc(100% - 5px)',
         background: '#191919',
-        border: '4px solid #191919',
+        border: '3px solid #191919',
+        borderRadius: 3,
     },
     
     ' &:focus': {
@@ -65,6 +67,7 @@ const SubmitButton = glamorous.button ({
         ' span': {
             padding: '16px 5px',
         },
+        
 
         ' &::after': {
             content: `none`, 

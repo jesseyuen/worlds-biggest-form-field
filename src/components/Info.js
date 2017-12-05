@@ -26,7 +26,7 @@ const Info = glamorous.div({
 
   ' .infowrapper-inner': {
       position: 'relative',
-      padding: '40px 40px 120px',
+      padding: '40px 40px 150px',
       zIndex: '5',
   },
   
@@ -44,23 +44,12 @@ const Info = glamorous.div({
     color: 'inherit',
     textDecoration: 'none',
     transition: 'color 200ms',
-
-    '&::after': {
-      position: 'absolute',
-      bottom: '-2px',
-      left: '0',
-      width: '100%',
-      height: '2px',
-      background: '#fff',
-      content: `''`, 
-    },
+    textShadow: '-1px -1px 0 #191919, 1px -1px 0 #191919, -1px 1px 0 #191919, 1px 1px 0 #191919',
   },
 
   ' .bananna': {
-      '&::after': {
-        background: '#f1c40f',
-      },
-  
+      boxShadow: 'inset 0 -3px 0 0 #f1c40f',      
+      
       ' &:hover': {
         color: '#f1c40f',
       },
@@ -68,9 +57,7 @@ const Info = glamorous.div({
     },
   
   ' .camera': {
-    '&::after': {
-      background: '#AAC6DC',
-    },
+    boxShadow: 'inset 0 -3px 0 0 #bdb', 
 
     ' &:hover': {
       color: '#AAC6DC',
@@ -79,9 +66,7 @@ const Info = glamorous.div({
   },
   
   ' .horses': {
-    '&::after': {
-      background: '#3498db',
-    },
+    boxShadow: 'inset 0 -3px 0 0 #3498db',
 
     ' &:hover': {
       color: '#3498db',
@@ -90,9 +75,7 @@ const Info = glamorous.div({
   },
   
   ' .poo': {
-    '&::after': {
-      background: '#7F5446',
-    },
+    boxShadow: 'inset 0 -3px 0 0 #7F5446',
 
     ' &:hover': {
       color: '#7F5446',
@@ -101,9 +84,7 @@ const Info = glamorous.div({
   },
   
   ' .prawn': {
-    '&::after': {
-      background: '#F68548',
-    },
+    boxShadow: 'inset 0 -3px 0 0 #F68548',
 
     ' &:hover': {
       color: '#F68548',
@@ -112,9 +93,7 @@ const Info = glamorous.div({
   },
   
   ' .boot': {
-    '&::after': {
-      background: '#27ae60',
-    },
+    boxShadow: 'inset 0 -3px 0 0 #27ae60',
 
     ' &:hover': {
       color: '#27ae60',
@@ -123,9 +102,7 @@ const Info = glamorous.div({
   },
   
   ' .orange': {
-    '&::after': {
-      background: '#f39c12',
-    },
+    boxShadow: 'inset 0 -3px 0 0 #f39c12',
 
     ' &:hover': {
       color: '#f39c12',
@@ -134,9 +111,7 @@ const Info = glamorous.div({
   },
   
   ' .rock': {
-    '&::after': {
-      background: '#C2431D',
-    },
+    boxShadow: 'inset 0 -3px 0 0 #C2431D',
 
     ' &:hover': {
       color: '#C2431D',
@@ -167,7 +142,7 @@ class InfoWrapper extends Component {
     return (
       <Info>
         <div className="infowrapper-inner">
-          <p>I come from a land curiously obsessed with oversized things. Hey, not those kinds of things... get your mind out of the gutter, geez. I'm talking about novelty structures of everyday things, just really, really big.</p> 
+          <p>I come from a land curiously obsessed with oversized things. Hey, not those kinds of things... get your mind out of the gutter, geez. I'm talking about novelty structures of everyday things, just really, really, really, big.</p> 
 
           <p>I'm talking big <a href="http://www.thebigcamera.com.au/" title="More about The Big Camera" target="_blank" className="camera">Cameras</a>, <a href="https://www.pinterest.com.au/pin/156570524516955715/" title="More about The Big Poo" target="_blank" className="poo">Poos</a>, <a href="https://www.tripadvisor.com.au/Attraction_Review-g528913-d8115622-Reviews-Big_Prawn-Ballina_New_South_Wales.html" title="More about The Big Prawn" target="_blank" className="prawn">Prawns</a>,  <a href="https://en.wikipedia.org/wiki/Big_Rocking_Horse" title="More about The Big Rocking Horse" target="_blank" className="horses">Rocking Horses</a>, <a href="https://harveyvisitorcentre.com.au/big-orange---harvey-wa.html" title="More about The Big Orange" target="_blank" className="orange">Oranges</a> & <a href="https://en.wikipedia.org/wiki/Golden_Gumboot" title="More about The Big Gumboot" target="_blank" className="boot">Gumboots</a>. I'm especially fond of our rather big <a href="https://en.wikipedia.org/wiki/Uluru" title="More about Uluru" target="_blank" className="rock">Rock</a>. </p> 
 
@@ -177,7 +152,7 @@ class InfoWrapper extends Component {
 
         <p className="smalltext"><span className="fancy">*</span> Disclaimer: May not actually be the biggest form in the world however it's without a doubt the biggest in the southern hemisphere.</p>
         
-        <p className="smalltext"><span className="fancy">**</span> This project was an excuse to dip my toes into the React ecosystem, learn a little along the way and get emojis out of my system. It's rough around the edges and questionablely over-engineered but I'm ok with this and I hope you are too.</p>
+        <p className="smalltext"><span className="fancy">**</span> This project was an excuse to dip my toes into the React ecosystem, learn a little along the way and get emojis out of my system. It's rough around the edges and I even included jQuery, shock-horror. I'm ok with this and I hope you are too.</p>
 
         </div>
       </Info>

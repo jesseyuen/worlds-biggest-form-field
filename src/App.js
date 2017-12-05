@@ -76,6 +76,10 @@ class App extends Component {
         }, 4000);
         console.log('success', data);
       }.bind(this),
+
+      beforeSend: function(data){
+        $('#formButton').html("<span>⏱️&nbsp; Sending</span>");
+      },
       
       // Fail..
       error: function(xhr, status, err) {
