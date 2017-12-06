@@ -6,7 +6,9 @@ const MessageInput = glamorous.textarea({
     // background: '#34495e',
     // background: '#27ae60',
     //background: '#2980b9',
-    background: '#f1c40f',
+    // background: '#f1c40f',
+    //background: '#4e6379',
+    background: '#2c3e50',    
     width: '100vw',
     height: '100vh',
     top: 0,
@@ -26,7 +28,7 @@ const MessageInput = glamorous.textarea({
     ':focus': { 
         outline: 0,
         padding: '180px 40px 40px',
-        background: '#2c3e50'
+        background: '#4e6379',
     },
 
     ':focus + label': { 

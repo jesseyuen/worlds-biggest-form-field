@@ -22,21 +22,23 @@ const WTFWrapper = glamorous.div({
       padding: '15px 25px',
       background: '#fff',
       color: '#191919',
-      border: '4px solid #191919',
+      border: '3px solid #191919',
       transition: 'transform .2s ease',
       zIndex: 1,
       willChange: 'transform',
+      borderRadius: 3,
   },
 
   ' a::after': {
     content: `''`, 
 		position: 'absolute',
-		top: '4px',
-		left: '4px',
+		top: '3px',
+		left: '3px',
 		width: 'calc(100% - 5px)',
 		height: 'calc(100% - 5px)',
 		background: '#191919',
-		border: '4px solid #191919',
+        border: '3px solid #191919',
+        borderRadius: 3,
   },
   
   '@media(min-width: 700px)': {
@@ -65,6 +67,7 @@ const WTFWrapper = glamorous.div({
       ' a': {
         width: '100%',
         display: 'block',
+        borderRadius: 0,
       },
 
       ' a::after': {

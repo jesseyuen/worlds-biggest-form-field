@@ -11,6 +11,7 @@ const TwitterShare = glamorous.div({
 
     ' span': {
        borderLeft: '0',
+       borderRadius: '0 3px 3px 0',
     },
   },
 })
