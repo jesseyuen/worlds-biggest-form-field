@@ -11,6 +11,7 @@ import TwitterShareWrapper from './components/TwitterShare';
 import InfoWrapper from './components/Info';
 import MessageLabel from './components/MessageLabel';
 import WTFWrapper from './components/WtfWrapper';
+import GiftShopWrapper from './components/GiftShop';
 
 const formFieldWrapper = {
   position: 'fixed',
@@ -55,14 +56,13 @@ class App extends Component {
     e.preventDefault();
   
     $.ajax({
-      // url: process.env.NODE_ENV !== "production" ? '/getMail' : "mailer.php",
       url: "mailer.php",
       type: "POST",
       data: {
         "form_msg": this.state.contactMessage
       },
       contentType: "application/json; charset=utf-8",
-      dataType: "json",
+      dataType: "HTML",
       cache: false,
       success: function(data) {
         // Success..
@@ -108,6 +108,8 @@ class App extends Component {
         </WTFWrapper>
 
         <div className="outer-container">
+
+          <GiftShopWrapper />
         
           <FormWrapper>       
             
