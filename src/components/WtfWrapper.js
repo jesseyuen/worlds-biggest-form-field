@@ -3,8 +3,8 @@ import glamorous from 'glamorous';
 
 const WTFWrapper = glamorous.div({
   position: 'fixed',
-  bottom: 40,
-  left: 40,
+  bottom: 30,
+  left: 30,
   zIndex: 10,
   transform: 'translateZ(0)',
 
@@ -12,14 +12,14 @@ const WTFWrapper = glamorous.div({
     textDecoration: 'none',
     position: 'relative',
     display: 'inline-block',
-    fontWeight: 700,
+    fontWeight: 600,
     textAlign: 'center',
   },
   
   ' span': {
       display: 'block',
       position: 'relative',
-      padding: '15px 25px',
+      padding: '10px 20px',
       background: '#fff',
       color: '#191919',
       border: '3px solid #191919',
@@ -56,12 +56,12 @@ const WTFWrapper = glamorous.div({
   '@media(max-width: 530px)': {
       bottom: 10,
       left: 10,
-      width: 'calc(65% - 10px)',
+      width: 'calc(60% - 10px)',
       fontSize: '13px',
       fontSize: '1.3rem',
 
       ' span': {
-          padding: '16px 5px',
+          padding: '12px 5px',
       },
 
       ' a': {

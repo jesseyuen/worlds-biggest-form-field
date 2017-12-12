@@ -21,7 +21,7 @@ const MessageInput = glamorous.textarea({
 
     ':focus': { 
         outline: 0,
-        padding: '180px 40px 40px',
+        padding: '180px 30px 30px',
         background: '#4e6379',
         // background: 'linear-gradient(to bottom, #f14b97 23%,#f14b97 23%,#f7d100 39%,#f7d100 39%,#f7d100 60%,#5cae3f 76%,#5cae3f 76%)',
     },

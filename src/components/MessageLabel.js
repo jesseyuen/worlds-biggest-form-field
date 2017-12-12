@@ -3,8 +3,8 @@ import glamorous from 'glamorous';
 
 const MessageLabel = glamorous.label({
     position: 'absolute',
-    top: 40,
-    left: 40,
+    top: 30,
+    left: 30,
     fontSize: '45px',
     fontSize: '4.5rem',
     lineHeight: '1.3',
@@ -12,6 +12,7 @@ const MessageLabel = glamorous.label({
     transition: 'transform 200ms, font-size 200ms, line-height 200ms',
     willChange: 'transform, font-size, line-height',
     transformOrigin: 'top left',
+    pointerEvents: 'none',
 
     ' span': {
         position: 'relative',
@@ -29,6 +30,11 @@ const MessageLabel = glamorous.label({
         top: 25,
         left: 25,
         paddingRight: '20px',
+    },
+    
+    '@media(max-width: 500px)': {
+        fontSize: '11px',
+        fontSize: '1.1em',
     },
 
 })

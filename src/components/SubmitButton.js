@@ -3,10 +3,10 @@ import glamorous from 'glamorous';
 
 const SubmitButton = glamorous.button ({
     position: 'fixed',
-    bottom: 40,
-    right: 40,
+    bottom: 30,
+    right: 30,
     border: 0,
-    fontWeight: '700',
+    fontWeight: '600',
     background: 'none',
     border: 0,
     padding: 0,
@@ -19,7 +19,7 @@ const SubmitButton = glamorous.button ({
     ' span': {
         display: 'block',
         position: 'relative',
-        padding: '15px 25px',
+        padding: '10px 20px',
         background: '#fff',
         color: '#191919',
         border: '3px solid #191919',
@@ -63,9 +63,10 @@ const SubmitButton = glamorous.button ({
         width: 'calc(30% - 10px)',
         fontSize: '13px',
         fontSize: '1.3rem',
+        width: '120px',
 
         ' span': {
-            padding: '16px 5px',
+            padding: '12px 5px',
         },
         
 

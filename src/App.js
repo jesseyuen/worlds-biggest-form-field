@@ -56,14 +56,16 @@ class App extends Component {
     e.preventDefault();
   
     $.ajax({
+      // url: process.env.NODE_ENV !== "production" ? '/getMail' : "mailer.php",
       url: "mailer.php",
       type: "POST",
       data: {
         "form_msg": this.state.contactMessage
       },
-      contentType: "application/json; charset=utf-8",
-      dataType: "HTML",
-      cache: false,
+      dataType: "html",
+      beforeSend: function(){
+        $('#formButton').html("<span>⏲&nbsp; Sending...</span>");
+      },
       success: function(data) {
         // Success..
         this.setState({
