@@ -19,7 +19,7 @@ const Info = glamorous.div({
       left: '0',
       width: '500px',
       height: '175px',
-      background: 'linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 60%)',
+      background: 'linear-gradient(to bottom, rgba(#191919,0) 0%,rgba(#191919,1) 60%)',
       zIndex: '20',
       content: `''`, 
   },
@@ -61,6 +61,15 @@ const Info = glamorous.div({
 
     ' &:hover': {
       color: '#AAC6DC',
+    },
+
+  },
+  
+  ' .koala': {
+    boxShadow: 'inset 0 -3px 0 0 #c165cc', 
+
+    ' &:hover': {
+      color: '#c165cc',
     },
 
   },
@@ -144,7 +153,7 @@ class InfoWrapper extends Component {
         <div className="infowrapper-inner">
           <p>I come from a land curiously obsessed with oversized objects. Hey, not that kind... get your mind out of the gutter, geez. I'm talking about novelty structures of everyday objects, just really, really, really, really, really, big.</p> 
 
-          <p>On your travels you might see big <a href="http://www.thebigcamera.com.au/" title="More about The Big Camera" target="_blank" className="camera">Cameras</a>, <a href="https://www.pinterest.com.au/pin/156570524516955715/" title="More about The Big Poo" target="_blank" className="poo">Poos</a>, <a href="https://www.tripadvisor.com.au/Attraction_Review-g528913-d8115622-Reviews-Big_Prawn-Ballina_New_South_Wales.html" title="More about The Big Prawn" target="_blank" className="prawn">Prawns</a>,  <a href="https://en.wikipedia.org/wiki/Big_Rocking_Horse" title="More about The Big Rocking Horse" target="_blank" className="horses">Rocking Horses</a>, <a href="https://harveyvisitorcentre.com.au/big-orange---harvey-wa.html" title="More about The Big Orange" target="_blank" className="orange">Oranges</a> & <a href="https://en.wikipedia.org/wiki/Golden_Gumboot" title="More about The Big Gumboot" target="_blank" className="boot">Gumboots</a> amongst many others. I'm especially fond of our rather big (and naturally occurring) <a href="https://en.wikipedia.org/wiki/Uluru" title="More about Uluru" target="_blank" className="rock">Rock</a>. </p> 
+          <p>On your travels you might see big <a href="http://www.thebigcamera.com.au/" title="More about The Big Camera" target="_blank" className="camera">Cameras</a>, <a href="https://www.atlasobscura.com/places/the-giant-koala" title="More about The Big Koala" target="_blank" className="koala">Koalas</a>, <a href="https://www.pinterest.com.au/pin/156570524516955715/" title="More about The Big Poo" target="_blank" className="poo">Poos</a>, <a href="https://www.tripadvisor.com.au/Attraction_Review-g528913-d8115622-Reviews-Big_Prawn-Ballina_New_South_Wales.html" title="More about The Big Prawn" target="_blank" className="prawn">Prawns</a>,  <a href="https://en.wikipedia.org/wiki/Big_Rocking_Horse" title="More about The Big Rocking Horse" target="_blank" className="horses">Rocking Horses</a>, <a href="https://harveyvisitorcentre.com.au/big-orange---harvey-wa.html" title="More about The Big Orange" target="_blank" className="orange">Oranges</a> & <a href="https://en.wikipedia.org/wiki/Golden_Gumboot" title="More about The Big Gumboot" target="_blank" className="boot">Gumboots</a> amongst many others. I'm especially fond of our rather big (and naturally occurring) <a href="https://en.wikipedia.org/wiki/Uluru" title="More about Uluru" target="_blank" className="rock">Rock</a>. </p> 
 
           <p>It's an honour to add this giant FORM to the collection. Always expanding to fit your viewport, this form is only limited in size by the screen you view it in.</p>
           <br />
@@ -153,6 +162,8 @@ class InfoWrapper extends Component {
         <p className="smalltext"><span className="fancy">*</span> Disclaimer: May not actually be the biggest form in the world however it's without a doubt the biggest in the southern hemisphere.</p>
         
         <p className="smalltext"><span className="fancy">**</span> Explainer: This project was an excuse to dip my toes into the React ecosystem, learn a little along the way and get emojis out of my system. It's rough around the edges and I'm even using jQuery... Quick, run for the hills! I'm ok with all of this and I hope you are too.</p>
+
+        <p className="smalltext"><a href="https://twitter.com/jesseyuen" target="_blank">By @jesseyuen</a></p>
 
         </div>
       </Info>
