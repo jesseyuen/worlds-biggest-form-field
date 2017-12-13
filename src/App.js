@@ -69,13 +69,18 @@ class App extends Component {
       success: function(data) {
         // Success..
         this.setState({
-          contactMessage: ''
+          contactMessage: 'Thanks! Lovely to hear from you.'
         });
-        $('#formButton').html("<span>🙌&nbsp; Recieved!</span>");
+
+        $('#formButton').html("<span>🙌&nbsp; Received!</span>");
         
-        setTimeout(function(){
+        setTimeout(() => {
+          this.setState({
+            contactMessage: ''
+          });
           $('#formButton').html("<span>🚀&nbsp; Send</span>");
         }, 4000);
+        
         console.log('success', data);
       }.bind(this),
       
@@ -118,7 +123,7 @@ class App extends Component {
             <form className="form" onSubmit={this.handleSubmit} method="POST">
                 <div className="form__field" style={formFieldWrapper}>
                   <MessageInput type="text" id="formMsg" value={this.state.contactMessage} onChange={this.handleChange} required></MessageInput>
-                  <MessageLabel htmlFor="worldsbiggestformfield" id="formLabel">Welcome to The Worlds Biggest Form<span>*</span><br/>Why not say hello?</MessageLabel>
+                  <MessageLabel htmlFor="worldsbiggestformfield" id="formLabel">Welcome to The Worlds Biggest Form<span>*</span><br/>Why not leave a message?</MessageLabel>
                   <SubmitButton type="submit" id="formButton"><span>🚀&nbsp; Send!</span></SubmitButton>
                 </div>
             </form>
