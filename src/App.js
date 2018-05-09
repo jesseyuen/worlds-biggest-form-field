@@ -22,6 +22,9 @@ const formFieldWrapper = {
   left: 0,
 };
 
+document.addEventListener("DOMContentLoaded", function(event) { 
+  document.getElementById('formMsg').focus();
+});
 
 document.onkeydown = function(evt) {
   evt = evt || window.event;
@@ -123,7 +126,7 @@ class App extends Component {
             <form className="form" onSubmit={this.handleSubmit} method="POST">
                 <div className="form__field" style={formFieldWrapper}>
                   <MessageInput type="text" id="formMsg" value={this.state.contactMessage} onChange={this.handleChange} required></MessageInput>
-                  <MessageLabel htmlFor="worldsbiggestformfield" id="formLabel">Welcome to The Worlds Biggest Form<span>*</span><br/>Why not leave a message?</MessageLabel>
+                  <MessageLabel htmlFor="worldsbiggestformfield" id="formLabel">You're in The Worlds Biggest Form<span>*</span><br/>Why not leave a message?</MessageLabel>
                   <SubmitButton type="submit" id="formButton"><span>🚀&nbsp; Send!</span></SubmitButton>
                 </div>
             </form>

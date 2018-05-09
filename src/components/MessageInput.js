@@ -14,15 +14,14 @@ const MessageInput = glamorous.textarea({
     boxSizing: 'border-box',
     resize: 'none',
     color:  '#fff',
-    transition: 'background 200ms, padding 150ms linear',
-    willChange: 'padding',
+    //transition: 'background 400ms',
     fontFamily: " 'soleil', sans-serif ",
     fontWeight: 300,
 
     ':focus': { 
         outline: 0,
         padding: '180px 30px 30px',
-        background: '#4e6379',
+        background: '#262e36',
         // background: 'linear-gradient(to bottom, #f14b97 23%,#f14b97 23%,#f7d100 39%,#f7d100 39%,#f7d100 60%,#5cae3f 76%,#5cae3f 76%)',
     },
 
@@ -31,7 +30,7 @@ const MessageInput = glamorous.textarea({
         fontSize: '1.6em',
         //transform: 'scale(0.6)',
         color: '#fff',
-        opacity: 0.5,
+        opacity: 0.8,
     },
 
     '@media(min-width: 701px) and (max-width: 1500px)': {

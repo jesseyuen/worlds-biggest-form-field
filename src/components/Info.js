@@ -161,7 +161,7 @@ class InfoWrapper extends Component {
 
         <p className="smalltext"><span className="fancy">*</span> Disclaimer: May not actually be the biggest form in the world however it's without a doubt the biggest in the southern hemisphere.</p>
         
-        <p className="smalltext"><span className="fancy">**</span> Explainer: This project was an excuse to dip my toes into the React ecosystem, learn a little along the way and get emojis out of my system. It's rough around the edges and I'm even using jQuery... Quick, run for the hills! I'm ok with all of this and I hope you are too.</p>
+        <p className="smalltext"><span className="fancy">**</span> Explainer: This project was an excuse to dip my toes into the React ecosystem, learn a little along the way and get emojis out of my system. It's rough around the edges and I'm even using jQuery to send the form... Quick, run for the hills!! I'm ok with all of this and I hope you are too.</p>
 
         <p className="smalltext"><a href="https://twitter.com/jesseyuen" target="_blank">By @jesseyuen</a></p>
 

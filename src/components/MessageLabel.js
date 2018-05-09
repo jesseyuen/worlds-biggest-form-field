@@ -9,9 +9,6 @@ const MessageLabel = glamorous.label({
     fontSize: '4.5rem',
     lineHeight: '1.3',
     color: '#fff',
-    transition: 'transform 200ms, font-size 200ms, line-height 200ms',
-    willChange: 'transform, font-size, line-height',
-    transformOrigin: 'top left',
     pointerEvents: 'none',
 
     ' span': {

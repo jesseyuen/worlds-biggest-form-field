@@ -21,6 +21,7 @@ function toggleDraw(e) {
   if ( document.body.classList.contains('has-open-draw') ) {
     document.body.classList.remove('has-open-draw');
     document.getElementById('form-info-toggle').innerHTML = '<span>🤔&nbsp; Eh?</span>';
+    document.getElementById('formMsg').focus();
   } else {
     document.body.classList.add('has-open-draw');
     document.getElementById('form-info-toggle').innerHTML = '<span>😐&nbsp; Oh, I see.</span>';
